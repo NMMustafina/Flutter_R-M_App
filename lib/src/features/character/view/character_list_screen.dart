@@ -24,6 +24,13 @@ class CharacterListScreen extends StatelessWidget {
                   child: ListTile(
                     leading: Image.network(character.image),
                     title: Text(character.name),
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        '/character-details',
+                        arguments: character.id,
+                      );
+                    },
                   ),
                 );
               },
