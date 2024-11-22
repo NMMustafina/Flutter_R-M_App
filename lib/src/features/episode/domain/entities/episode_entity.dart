@@ -1,21 +1,21 @@
-class CharacterEntity {
-  CharacterEntity({
+class EpisodeEntity {
+  EpisodeEntity({
     required this.id,
     required this.name,
-    required this.image,
+    required this.airDate,
   });
 
   final int id;
   final String name;
-  final String image;
+  final String airDate;
 
   @override
   bool operator ==(Object other) =>
-      other is CharacterEntity &&
+      other is EpisodeEntity &&
           id == other.id &&
           name == other.name &&
-          image == other.image;
+          airDate == other.airDate;
 
   @override
-  int get hashCode => Object.hash(id, name, image);
+  int get hashCode => Object.hash(id, name, airDate);
 }
